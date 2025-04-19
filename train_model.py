@@ -24,7 +24,7 @@ best_estimator = None
 
 mlflow.set_experiment("HousePriceRegression")
 
-with mlflow.start_run():
+with mlflow.start_run() as run:
     print(f"Started run with ID: {run.info.run_id}")
     
     for name, model in models.items():
