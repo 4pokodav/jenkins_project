@@ -25,6 +25,8 @@ best_estimator = None
 mlflow.set_experiment("HousePriceRegression")
 
 with mlflow.start_run():
+    print(f"Started run with ID: {run.info.run_id}")
+    
     for name, model in models.items():
         grid = GridSearchCV(model, {'alpha': alphas}, cv=5, scoring='neg_mean_squared_error')
         grid.fit(X, y)
