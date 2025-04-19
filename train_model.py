@@ -6,7 +6,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import mean_squared_error
 from joblib import dump
 
-df = pd.read_csv('data/processed.csv')
+df = pd.read_csv('processed.csv')
 X = df.drop('price', axis=1)
 y = df['price']
 
