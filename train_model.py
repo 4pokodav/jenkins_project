@@ -48,4 +48,4 @@ with mlflow.start_run() as run:
     mlflow.log_metric("best_mse", best_score)
 
 with open('best_model.txt', 'w') as f:
-    f.write("runs:/{}/best_model".format(mlflow.active_run().info.run_id))
+    f.write(f"runs:/{run.info.run_id}/best_model")
